@@ -24,6 +24,5 @@ public class MatchModel {
         result.add(new Match ("m2","Alemanha","Franca",2,2));
         result.add(new Match ("m3","Canada","Usa",2,2));       
         return result;
-    
     }
 }
