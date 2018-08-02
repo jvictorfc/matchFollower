@@ -3,10 +3,20 @@
     <servlet>
         <servlet-name>mfsl</servlet-name>
         <servlet-class>controller.mfsl</servlet-class>
+        <async-supported>true</async-supported>
+    </servlet>
+    <servlet>
+        <servlet-name>push</servlet-name>
+        <servlet-class>controller.push</servlet-class>
+        <async-supported>true</async-supported>
     </servlet>
     <servlet-mapping>
         <servlet-name>mfsl</servlet-name>
         <url-pattern>/mfsl</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>push</servlet-name>
+        <url-pattern>/push</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

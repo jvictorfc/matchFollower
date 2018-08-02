@@ -5,51 +5,60 @@
  */
 package entities;
 
+import java.util.Date;
+
 /**
  *
  * @author jvict
  */
 public class Match {
-    private String idM;
-    private String t1;
-    private String t2;
+    private int idM;
+    private Team t1;
+    private Team t2;
     private int t1r;
     private int t2r;
+    private Date dateM;
+    private String place;
 
-    public Match(String idM, String t1, String t2, int t1r, int t2r) {
+    public Match() {
+    }
+
+    @Override
+    public String toString() {
+        return "Match{" + "idM=" + idM + ", t1=" + t1 + ", t2=" + t2 + ", t1r=" + t1r + ", t2r=" + t2r + ", dateM=" + dateM + ", place=" + place + '}';
+    }
+
+    public Match(int idM, Team t1, Team t2, int t1r, int t2r, String place, Date dateM) {
         this.idM = idM;
         this.t1 = t1;
         this.t2 = t2;
         this.t1r = t1r;
         this.t2r = t2r;
+        this.dateM = dateM;
+        this.place = place;
     }
 
-    public Match() {
-    }
-
-    
-    
-    public String getIdM() {
+    public int getIdM() {
         return idM;
     }
 
-    public void setIdM(String idM) {
+    public void setIdM(int idM) {
         this.idM = idM;
     }
 
-    public String getT1() {
+    public Team getT1() {
         return t1;
     }
 
-    public void setT1(String t1) {
+    public void setT1(Team t1) {
         this.t1 = t1;
     }
 
-    public String getT2() {
+    public Team getT2() {
         return t2;
     }
 
-    public void setT2(String t2) {
+    public void setT2(Team t2) {
         this.t2 = t2;
     }
 
@@ -68,6 +77,25 @@ public class Match {
     public void setT2r(int t2r) {
         this.t2r = t2r;
     }
+
+    public Date getDateM() {
+        return dateM;
+    }
+
+    public void setDateM(Date dateM) {
+        this.dateM = dateM;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
+    
+    
+    
     
     
 }
